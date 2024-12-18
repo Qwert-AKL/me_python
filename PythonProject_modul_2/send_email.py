@@ -1,64 +1,125 @@
-# Версия 2
-# просто флаги
-flag_a_r=0
-flag_b_r=0
-flag_a_s=0
-flag_b_s=0
+# Версия 3
 a=''
 b=''
-c=''
+suffix = ('.com','.ru','.net')
+bansufix = ('.uk')
+default_sender='university.help@gmail.com'
 
 def send_email(message,recipient,sender='university.help@gmail.com'):
-    global a,b,c
+    global a, b,c
     a=recipient
     b=sender
     c=message
+    print('\n',c,'\n')
 send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
-# send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
+#send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
 #send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
-# send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
+#send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
 
-#Проверка получателя
 def check_recipient(recipient):
-    global flag_a_r, flag_b_r, flag_a_s, flag_b_s
+    global suffix,a
     for i in recipient:
-        if i == '@':
-            flag_a_r += 1
-            for x in recipient:
-                if x == '.com' or '.ru' or '.net':
-                    flag_b_r += 1
-            # print(flag_a_r, flag_b_r)
-            print(f'email отправителя корректный: {recipient}')
+        if '@' in recipient:
+            if recipient.endswith(suffix):
+                print(f'email получателя корректный: {recipient}')
+                break
+        else:
+            print(f'email получателя некорректный: {recipient}')
+            break
 check_recipient(a)
 
-# #Проверка отравителя
 def check_sender(sender):
-    global flag_a_r, flag_b_r, flag_a_s, flag_b_s
+    global suffix,bansufix, default_sender, a
     for i in sender:
-        if i == '@':
-            flag_a_s += 1
-            for x in sender:
-                if x == '.com' or '.ru' or '.net':
-                    flag_b_s += 1
-            # print(flag_a_s, flag_b_s)
-            print(f'email отправителя корректный: {sender}')
+        if '@' in sender:
+            if sender.endswith(suffix) != sender.endswith(bansufix):
+                if b == a:
+                    print(f'email отправителя некорректный:{sender}\n'
+                          f'Нельзя отправить письмо самому себе')
+                    break
+                else:
+                    if sender == default_sender:
+                        print(f'email отправителя корректный: {sender}')
+                        break
+                    else:
+                        if sender.endswith(bansufix):
+                            print(f'Невозможно отправить письмо с адреса {sender}, данный {bansufix} домен запрещён')
+                            break
+                        else:
+                            print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса : {sender} на адрес {a}')
+                            break
+            else:
+                print(f'email отправителя некорректный: {sender}')
+                break
+
 check_sender(b)
 
-#проверка на совпадения
-def check_R_S(recipient, sender):
 
-    global flag_a_r, flag_b_r, flag_a_s, flag_b_s
-    # print(flag_a_r, flag_b_r, flag_a_s, flag_b_s)
-    if sender == recipient:
-        print(f'Нельзя отправить письмо самому себе!\nc {recipient} на {sender}')
-        print(f'Но если очень сильно нужно, то можно')
-    if flag_b_r and flag_b_s==0:
-        print('Невозможно отправить письмо с адреса ')
-    if flag_b_r and flag_b_s!=0 and b=='university.help@gmail.com':
-        print(f'Письмо успешно отправлено с адреса {b} на адресат {a}')
-    if flag_b_r and flag_b_s!=0 and b!='university.help@gmail.com':
-        print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса {b} на адресат {a}')
-check_R_S(a,b)
+
+
+
+#
+# # Версия 2
+# # просто флаги
+# flag_a_r=0
+# flag_b_r=0
+# flag_a_s=0
+# flag_b_s=0
+# a=''
+# b=''
+# c=''
+#
+# def send_email(message,recipient,sender='university.help@gmail.com'):
+#     global a,b,c
+#     a=recipient
+#     b=sender
+#     c=message
+# send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
+# # send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
+# #send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
+# # send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
+#
+# #Проверка получателя
+# def check_recipient(recipient):
+#     global flag_a_r, flag_b_r, flag_a_s, flag_b_s
+#     for i in recipient:
+#         if i == '@':
+#             flag_a_r += 1
+#             for x in recipient:
+#                 if x == '.com' or '.ru' or '.net':
+#                     flag_b_r += 1
+#             # print(flag_a_r, flag_b_r)
+#             print(f'email отправителя корректный: {recipient}')
+# check_recipient(a)
+#
+# # #Проверка отравителя
+# def check_sender(sender):
+#     global flag_a_r, flag_b_r, flag_a_s, flag_b_s
+#     for i in sender:
+#         if i == '@':
+#             flag_a_s += 1
+#             for x in sender:
+#                 if x == '.com' or '.ru' or '.net':
+#                     flag_b_s += 1
+#             # print(flag_a_s, flag_b_s)
+#             print(f'email отправителя корректный: {sender}')
+# check_sender(b)
+#
+# #проверка на совпадения
+# def check_R_S(recipient, sender):
+#
+#     global flag_a_r, flag_b_r, flag_a_s, flag_b_s
+#     # print(flag_a_r, flag_b_r, flag_a_s, flag_b_s)
+#     if sender == recipient:
+#         print(f'Нельзя отправить письмо самому себе!\nc {recipient} на {sender}')
+#         print(f'Но если очень сильно нужно, то можно')
+#     if flag_b_r and flag_b_s==0:
+#         print('Невозможно отправить письмо с адреса ')
+#     if flag_b_r and flag_b_s!=0 and b=='university.help@gmail.com':
+#         print(f'Письмо успешно отправлено с адреса {b} на адресат {a}')
+#     if flag_b_r and flag_b_s!=0 and b!='university.help@gmail.com':
+#         print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса {b} на адресат {a}')
+# check_R_S(a,b)
 
 
 

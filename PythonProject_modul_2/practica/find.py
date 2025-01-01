@@ -17,10 +17,10 @@ def find_indexes(a_string, substring):
 
 
 string = 'bobby hadz bobbyhadz.com'
-print(find_indexes(string, 'bob'))  # 👉️ [0, 11]
+print(find_indexes(string, 'bob'))
 
 string = 'bobobobob'
-print(find_indexes(string, 'bob'))  # 👉️ [0, 2, 4, 6]
+print(find_indexes(string, 'bob'))
 
 
 

@@ -22,4 +22,3 @@
 # stack.pop()
 # print('Убрали элемент', stack)
 # print(stack)
-

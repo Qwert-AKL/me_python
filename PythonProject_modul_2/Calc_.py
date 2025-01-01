@@ -4,12 +4,7 @@ import tkinter as tk  # "as tk"  сокращение библиотеки, дл
 # Функция возврата
 def get_values():   # чисто для возврата данных из полей
     num1 = int(number1_entry.get())# для получения данных из поля и передача в переменную num1
-    if input num1:
-        memory=num1
-        answer_entry.delete(0, 'end')
-
     num2 = int(number2_entry.get())
-    print(num1 + num2)
     return num1,num2        #возвращает значение
 
 def insert_values(value):
@@ -24,7 +19,7 @@ def add():
     # num2 = int(number2_entry.get())
     # print(num1 + num2)
     res = num1 + num2
-    insert_values(res)   # передача в фунцию значения
+    # insert_values(res)   # передача в фунцию значения
     # answer_entry.delete(0,'end')  # для очитски формы перед вставкой
     # answer_entry.insert(0, res)  # вставление результата в поле "Ответ". указыается индекс, а потом что вставляем.
 # функция для вычитания
@@ -32,6 +27,7 @@ def sub():
     num1, num2 = get_values()
     print(num1 - num2)
     res = num1 - num2
+
     insert_values(res)
     # answer_entry.delete(0,'end')  # для очитски формы перед вставкой
     # answer_entry.insert(0, res)  # вставление результата в поле "Ответ". указыается индекс, а потом что вставляем.
@@ -40,25 +36,16 @@ def mul():
     num1, num2 = get_values()
     print(num1 * num2)
     res = num1 * num2
-    insert_values(res)
+    # insert_values(res)
     # answer_entry.delete(0,'end')  # для очитски формы перед вставкой
     # answer_entry.insert(0, res)  # вставление результата в поле "Ответ". указыается индекс, а потом что вставляем.
 # функция для деления
 def div():
-
     num1, num2 = get_values()
     print(num1 / num2)
     res = num1 / num2
     insert_values(res)
 # функция для ответа
-def answer():
-    num1, num2 = get_values()
-    if add():
-        insert_values(res)
-    elif sub():
-        insert_values(res)
-    elif mul:
-        insert_values(res)
 
     # answer_entry.delete(0,'end')  # для очитски формы перед вставкой
     # answer_entry.insert(0, res)  # вставление результата в поле "Ответ". указыается индекс, а потом что вставляем.
@@ -84,7 +71,7 @@ button_sub.place(x=240, y=180)
 button_add = tk.Button(window,bg='grey', text='плюс\nушка', width=6, height=2,
                        command=add)  # создание кнопки и привязка к окну под названием window
 button_add.place(x=240, y=220)  # создание кнопки в координатах
-button_answer = tk.Button(window, bg='red', text='ответ', width=10, height=2,command=div)
+button_answer = tk.Button(window, bg='red', text='ответ', width=10, height=2,command=None)
 button_answer.place(x=212, y=260)
 
 # Первое поле для ввода

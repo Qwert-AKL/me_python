@@ -40,14 +40,28 @@
 #     else:
 #          print(" " * (i - 2*m+1) + "*" * (w-2*(i-2*m+1)) + " " * (i - 2*m+1))
 
-n=20
-k=1
-counter=1
-for i in range(n):
-    for j in range(n):
-        if k % 2 == 0:
-            print(counter, end ="  ")
-            counter+=1
-        else: print("*",end="  ")
-        k+=1
-    print()
+# n=20
+# k=1
+# counter=1
+# for i in range(n):
+#     for j in range(n):
+#         if k % 2 == 0:
+#             print(counter, end ="  ")
+#             counter+=1
+#         else: print("*",end="  ")
+#         k+=1
+#     print()
+
+# i = 1
+# j = 1
+# while i < 10:
+#     while j < 10:
+#         print(i * j, end="\t")
+#         j += 1
+#     print("\n")
+#     j = 1
+#     i += 1
+
+for c1 in  "ab":
+    for c2 in "ba":
+        print(f"{c1}{c2}")

@@ -1,58 +1,129 @@
-# Версия 3
-a=''
-b=''
+# Версия 4
+"""Задача "Рассылка писем" """
+
 suffix = ('.com','.ru','.net')
 bansufix = ('.uk')
-default_sender='university.help@gmail.com'
+default_sender= ('university.help@gmail.com')
+def send_email(message,recipient, sender = "university.help@gmail.com"):
+    global suffix,bansufix,default_sender
+    for i in recipient:
+        if '@' in recipient:
+            if recipient.endswith(suffix):
+                print(f'email получателя корректный: {recipient}')
+                flag_r=True
+                break
+            else:
+                print(f'email получателя некорректный: {recipient}')
+                flag_r = False
+                break
+        print(f'email получателя некорректный: {recipient}')
+        flag_r = False
+        break
+    for i in sender:
+        if '@' in sender:
+            if sender.endswith(suffix) != sender.endswith(bansufix):
+                if recipient == sender:
+                    print(f'email отправителя некорректный:{sender}\n'
+                          f'Нельзя отправить письмо самому себе')
+                    flag_s = False
+                    break
+                else:
+                    if sender == default_sender:
+                        print(f'email отправителя корректный: {sender}')
+                        flag_s = True
+                        break
+                    else:
+                        if sender.endswith(bansufix):
+                            print(f'Невозможно отправить письмо с адреса {sender}, данный {bansufix} домен запрещён')
+                            flag_s = False
+                            break
+                        else:
+                            print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса : {sender} на адрес {recipient}')
+                            flag_s = True
+                            break
+            else:
+                print(f'email отправителя некорректный: {sender}')
+                flag_s = False
+                break
+    if flag_s ==True and flag_r == True:
+        print(f'{message} ОТПРАВЛЕНО')
+    else:
+        print(f'{message} НЕ ОТПРАВЛЕНО')
 
-def send_email(message,recipient,sender='university.help@gmail.com'):
-    global a, b,c
-    a=recipient
-    b=sender
-    c=message
-    print('\n',c,'\n')
+print('Задача "Рассылка писем" \n')
+
+"""Функции вызова"""
 send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
 # send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
 # send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
 # send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
 
-def check_recipient(recipient):
-    global suffix,a
-    for i in recipient:
-        if '@' in recipient:
-            if recipient.endswith(suffix):
-                print(f'email получателя корректный: {recipient}')
-                break
-        else:
-            print(f'email получателя некорректный: {recipient}')
-            break
-check_recipient(a)
 
-def check_sender(sender):
-    global suffix,bansufix, default_sender, a
-    for i in sender:
-        if '@' in sender:
-            if sender.endswith(suffix) != sender.endswith(bansufix):
-                if b == a:
-                    print(f'email отправителя некорректный:{sender}\n'
-                          f'Нельзя отправить письмо самому себе')
-                    break
-                else:
-                    if sender == default_sender:
-                        print(f'email отправителя корректный: {sender}')
-                        break
-                    else:
-                        if sender.endswith(bansufix):
-                            print(f'Невозможно отправить письмо с адреса {sender}, данный {bansufix} домен запрещён')
-                            break
-                        else:
-                            print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса : {sender} на адрес {a}')
-                            break
-            else:
-                print(f'email отправителя некорректный: {sender}')
-                break
 
-check_sender(b)
+
+
+
+
+
+
+
+
+
+# Версия 3
+# a=''
+# b=''
+# suffix = ('.com','.ru','.net')
+# bansufix = ('.uk')
+# default_sender='university.help@gmail.com'
+#
+# def send_email(message,recipient,sender='university.help@gmail.com'):
+#     global a, b,c
+#     a=recipient
+#     b=sender
+#     c=message
+#     print('\n',c,'\n')
+# send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
+# # send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
+# # send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
+# # send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
+#
+# def check_recipient(recipient):
+#     global suffix,a
+#     for i in recipient:
+#         if '@' in recipient:
+#             if recipient.endswith(suffix):
+#                 print(f'email получателя корректный: {recipient}')
+#                 break
+#         else:
+#             print(f'email получателя некорректный: {recipient}')
+#             break
+# check_recipient(a)
+#
+# def check_sender(sender):
+#     global suffix,bansufix, default_sender, a
+#     for i in sender:
+#         if '@' in sender:
+#             if sender.endswith(suffix) != sender.endswith(bansufix):
+#                 if b == a:
+#                     print(f'email отправителя некорректный:{sender}\n'
+#                           f'Нельзя отправить письмо самому себе')
+#                     break
+#                 else:
+#                     if sender == default_sender:
+#                         print(f'email отправителя корректный: {sender}')
+#                         break
+#                     else:
+#                         if sender.endswith(bansufix):
+#                             print(f'Невозможно отправить письмо с адреса {sender}, данный {bansufix} домен запрещён')
+#                             break
+#                         else:
+#                             print(f'НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса : {sender} на адрес {a}')
+#                             break
+#             else:
+#                 print(f'email отправителя некорректный: {sender}')
+#                 break
+#
+# check_sender(b)
 
 
 

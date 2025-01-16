@@ -3,30 +3,53 @@
 # Версия 2
 
 class House:
-    # global minfloors
-    # minfloors = -3
 
     def __init__(self, name, number_of_floors):
+
         self.name = name
         self.number_of_floors = number_of_floors
+        self.info()
 
-    def go_to(self, new_floor):
-        if 1 < new_floor <= self.number_of_floors:
-            for i in range(1,new_floor+1):
-                print(i)
-        if 1 > new_floor < self.number_of_floors:
-            print('Такого этажа нет')
-        else:
-            print('Такого этажа нет')
+
+    def info(self):
+        if self.name == 'ЖК "Горский"':
+            print('-------------------------------------------------------')
+            print(f'Добро пожаловать в {self.name}\n'
+                  f'в жилищном комплексе {self.number_of_floors} этажей.')
+            print('-------------------------------------------------------')
+        elif self.name == '"Домик в деревне"':
+            print('-------------------------------------------------------')
+            print(f'Добро пожаловать в {self.name}\n'
+                  f'в жилищном комплексе {self.number_of_floors} этажей.')
+            print('-------------------------------------------------------')
+
+
+    def go_to(self, new_floor,start_):
+        from random import randint
+        self.start_ = randint(1, 20)
+
+        if self.start_ < new_floor <= self.number_of_floors:
+            print('Требуемый этаж', new_floor, 'Стартовый этаж', self.start_)
+            for i in range(self.start_,new_floor+1,1):
+                print(f'лифт поднялся на этаж №{i} c этажа №{self.start_}')
+        elif new_floor<self.start_:
+            print('Требуемый этаж',new_floor,'Стартовый этаж',self.start_)
+            for i in range(self.start_,new_floor-1,-1):
+                print(f'лифт опускается на этаж №{i}')
+        elif new_floor>self.number_of_floors:
+            print('Требуемый этаж', new_floor)
+            print(f'Такого этажа нет. В доме {self.number_of_floors} этажей')
+        elif 1>new_floor:
+            print('В подвал лифт не идёт')
 
 h1 = House('ЖК "Горский"', 18)
-h1.go_to(8)
+h1.go_to(17,0)
 
 h2 = House('"Домик в деревне"', 10)
-h2.go_to(2)
+h2.go_to(20,0)
 
 
-# Версия 1 (не удачная)
+# Версия 1 (не удачная, частично работает подъём спуск с рандомного этажа есть ошибка)
 # from random import randrange
 # global number_of_floors_lift, numbers1
 #

@@ -1,0 +1,515 @@
+Index: ../lists.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lists.py b/../lists.py
+new file mode 100644
+--- /dev/null	(date 1732131316915)
++++ b/../lists.py	(date 1732131316915)
+@@ -0,0 +1,17 @@
++#spisok_vsjakoj_figni=['1','Cлон',',буква','имя']
++#print(spisok_vsjakoj_figni)
++#spisok_vsjakoj_figni[2]='клоп'
++#print(spisok_vsjakoj_figni)
++#spisok_vsjakoj_figni.append ('клопик') # нужно добавлять ковычки. Команда добавляет данные в конец списка
++#print(spisok_vsjakoj_figni)
++#spisok_vsjakoj_figni.extend('string') # распределяет слово по символьно
++#print(spisok_vsjakoj_figni)
++#spisok_vsjakoj_figni.extend(['СЛОВО',2,4,"cписок"]) #добавление более чем 1
++#print(spisok_vsjakoj_figni)
++#spisok_vsjakoj_figni.remove("cписок")    #удаление из списка
++#print(spisok_vsjakoj_figni)
++#print("Cлон" in spisok_vsjakoj_figni) #in проверяет наличие в списке словва СЛОН
++#print("Cлон" not in spisok_vsjakoj_figni) # not in проверка отсутсвия  списке
++#print(spisok_vsjakoj_figni[0:5:1])   #вывод списка через срезы [начало символ 0: конец символов 5: шаг:1]
++karteg=1,3,4,5,6,"h"
++print(karteg)
+Index: ../динамическая типизация.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../динамическая типизация.py b/../динамическая типизация.py
+new file mode 100644
+--- /dev/null	(date 1732131316934)
++++ b/../динамическая типизация.py	(date 1732131316934)
+@@ -0,0 +1,8 @@
++name='Urban'
++print(name,type(name))
++name=5
++print(name,type(name))
++name=5.6
++print(name,type(name))
++name=[1,3]
++print(name,type(name))
+\ No newline at end of file
+Index: ../stroka_1.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../stroka_1.py b/../stroka_1.py
+new file mode 100644
+--- /dev/null	(date 1732131316925)
++++ b/../stroka_1.py	(date 1732131316925)
+@@ -0,0 +1,6 @@
++example='Топинамбур'
++print(example[0]) #вывод первого символа
++print(example[-1])
++print(example[5:])
++print(example[::-1])
++print(example[1::2])
+\ No newline at end of file
+Index: ../module_1_3.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../module_1_3.py b/../module_1_3.py
+new file mode 100644
+--- /dev/null	(date 1732131316957)
++++ b/../module_1_3.py	(date 1732131316957)
+@@ -0,0 +1,8 @@
++Name="Aleksej"
++print("Name:", Name)
++age=41
++print("Age:", age)
++age_new=42
++print("Ne Age:", age_new)
++is_student = True
++print("Is Student:", is_student)
+\ No newline at end of file
+Index: ../.idea/python_project.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../.idea/python_project.iml b/../.idea/python_project.iml
+new file mode 100644
+--- /dev/null	(date 1732131316947)
++++ b/../.idea/python_project.iml	(date 1732131316947)
+@@ -0,0 +1,14 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.venv" />
++    </content>
++    <orderEntry type="jdk" jdkName="Python 3.13 (python_project)" jdkType="Python SDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++  <component name="PyDocumentationSettings">
++    <option name="format" value="PLAIN" />
++    <option name="myDocStringFormat" value="Plain" />
++  </component>
++</module>
+\ No newline at end of file
+Index: ../lesson 2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../lesson 2.py b/../lesson 2.py
+new file mode 100644
+--- /dev/null	(date 1732131316977)
++++ b/../lesson 2.py	(date 1732131316977)
+@@ -0,0 +1,2 @@
++print(5**5)
++print(type(5**5))
+Index: ../module_1_4.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../module_1_4.py b/../module_1_4.py
+new file mode 100644
+--- /dev/null	(date 1732131316967)
++++ b/../module_1_4.py	(date 1732131316967)
+@@ -0,0 +1,6 @@
++my_string= input('Введите произвольный текст: ')
++print('Количество символов в тексте равно:', len(my_string))
++print('Перевод текста в верхний регистр: ',my_string.upper())
++print('Перевод текста в нижний регистр: ',my_string.lower())
++print('Удаление пробелов в тексте: ',my_string.replace(' ',''))
++print('Отображение последнего символа в тексте: ', my_string[-1])
+\ No newline at end of file
+Index: ../!shpora.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../!shpora.py b/../!shpora.py
+new file mode 100644
+--- /dev/null	(date 1732131316991)
++++ b/../!shpora.py	(date 1732131316991)
+@@ -0,0 +1,66 @@
++#ЧИСЛА
++print("-"*170)
++print("ЧИСЛА")
++a=5
++b=2.3
++c=1+4j
++print(a,'тип значения:', type(a))
++print(b,'тип значения:', type(b))
++print(c,'тип значения:', type(c))
++
++#СПИСКИ [квадратные скобки] (изменяемый тип)
++print("-"*170)
++print("СПИСКИ")
++d=[1,4,5,"СТРОКА",5,5,3,True]
++print("d[3]:= ", d[3]) #печатает 3-е значение из списка
++print('d:= ', d[0:6:1]) #печатет диапазон с шагом 1
++print('d[5:]=',d[5:]) #печатет с 5 символа
++
++e=[1,2,3,4,5]
++e[4]= 'замена'
++print(e)
++
++
++#КОРТЕЖИ (круглые скобки) (неизменяемый тип)tuple
++print("-"*170)
++print("КОРТЕЖИ")
++f=(45,'текст', 1+3j)
++print(f[0:2])
++
++#СТРОКИ
++print("-"*170)
++print("СТРОКИ")
++s1= "ПРОСТАЯ стройка"
++s2= """МНОГОСТРОЧНАЯ  
++                    строка"""  # МНОГОСТРОЧНАЯ с """"""
++print(s1,s2)
++
++#МНОЖЕСТВО {фигурные скобки} set
++print("-"*170)
++print("МНОЖЕСТВО")
++g={1,2,3,4,5}
++g=[1]
++print(g)
++
++# СЛОВАРИ {фигурные скобки} имеют ключи и значения
++# ключ изменить нельзя, значение можно
++print("-"*170)
++print("СЛОВАРИ")
++h={1:'значение 1',2:545664562}
++print(d[1])  #вывод значения ключа
++print(h,type(h))
++
++#преобразование типов данных
++print("-"*170)
++l=set([1,3,4,5,7,9,0,4,3,2,6,6,8,0])
++print(l,set)
++r=tuple({4,5,5,7,8,5,3,33})
++print(r,tuple)
++t=list('hello')
++print(t,list)
++
++k=dict([[1,2],[3,4]])
++print(k,dict)
++dk=dict([(56,3),(100,4)])
++print(dk,dict)
++
+Index: ../task3.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../task3.py b/../task3.py
+new file mode 100644
+--- /dev/null	(date 1732131316985)
++++ b/../task3.py	(date 1732131316985)
+@@ -0,0 +1,4 @@
++#print('3rd program')
++print(2*2+2)
++print(2*(2+2))
++print((2*2+2)==(2*(2+2)))
+\ No newline at end of file
+Index: ../repka.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../repka.txt b/../repka.txt
+new file mode 100644
+--- /dev/null	(date 1732131317010)
++++ b/../repka.txt	(date 1732131317010)
+@@ -0,0 +1,2 @@
++Посадил некто репку.
++Выросла репка большая.
+\ No newline at end of file
+Index: ../task4.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../task4.py b/../task4.py
+new file mode 100644
+--- /dev/null	(date 1732131317001)
++++ b/../task4.py	(date 1732131317001)
+@@ -0,0 +1,2 @@
++#print('4th program')
++print(int(float('123.456') * 10) % 10)
+\ No newline at end of file
+Index: ../average_score.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../average_score.py b/../average_score.py
+new file mode 100644
+--- /dev/null	(date 1732131317027)
++++ b/../average_score.py	(date 1732131317027)
+@@ -0,0 +1,12 @@
++#Средний бал ученика
++grades=[[5,3,3,5,4],[2,2,2,3],[4,5,5,2],[4,4,3],[5,5,5,4,5]]    #данные в типе список
++students={"Johny",'Bolbo','Steve','Khendrik','Aaron'} #данные в типе множества
++print('Список студентов: ', students,type(students))
++students_sort=list(students)    #преобразовываем в список
++students_sort.sort() #сортировка списка
++print('Сортированный список студентов: ', students_sort,type(students_sort))
++students_grades=dict([[students_sort[0],grades[0]],[students_sort[1],grades[1]],[students_sort[2],grades[2]],[students_sort[3],grades[3]],[students_sort[4],grades[4]]])
++print('Оценки студента: ',students_grades)
++average_score=sum(grades[0])/len(grades[0]), sum(grades[1])/len(grades[1]), sum(grades[2])/len(grades[2]), sum(grades[3])/len(grades[3]), sum(grades[4])/len(grades[4])
++students_grades=dict([[students_sort[0],average_score[0]],[students_sort[1],average_score[1]],[students_sort[2],average_score[2]],[students_sort[3],average_score[3]],[students_sort[4],average_score[4]]])
++print('Средний бал студента: ', students_grades)
+\ No newline at end of file
+Index: ../task2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../task2.py b/../task2.py
+new file mode 100644
+--- /dev/null	(date 1732131317019)
++++ b/../task2.py	(date 1732131317019)
+@@ -0,0 +1,2 @@
++#print('2nd program')
++print(9.99>9.98 and 1000 !=1000.1)
+\ No newline at end of file
+Index: ../task1.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../task1.py b/../task1.py
+new file mode 100644
+--- /dev/null	(date 1732131317044)
++++ b/../task1.py	(date 1732131317044)
+@@ -0,0 +1,2 @@
++#print('1st program')
++print((9**0.5)*5)
+\ No newline at end of file
+Index: ../peremen.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../peremen.py b/../peremen.py
+new file mode 100644
+--- /dev/null	(date 1732131317034)
++++ b/../peremen.py	(date 1732131317034)
+@@ -0,0 +1,13 @@
++first_name="Алексей"
++homework = 12 # кол-во домашнего задания
++time_spent = 1.5 #затраченное время
++medium_time_spent1 = 0.125  # среднее время выполнения одного задания
++name_curs = "Python" #название курса
++print("  Name:", first_name,",", "Количество выполненного ДЗ:",
++      homework,"шт. по курсу:", name_curs,",","Среднее время выполнения задания",
++      medium_time_spent1, "часа.")
++#print()
++#print("  Name:", first_name +'\n',
++#     "Курс:",name_curs + '\n', "Кол-во выполненного ДЗ:", homework,"шт." + "\n",
++#     "Среднее время выполнения задания", medium_time_spent1, "часа.")
++# name1=input("Введи своё имя")
+\ No newline at end of file
+Index: ../main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../main.py b/../main.py
+new file mode 100644
+--- /dev/null	(date 1732131317053)
++++ b/../main.py	(date 1732131317053)
+@@ -0,0 +1,16 @@
++# This is a sample Python script.
++
++# Press Shift+F10 to execute it or replace it with your code.
++# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
++
++
++def print_hi(name):
++    # Use a breakpoint in the code line below to debug your script.
++    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
++
++
++# Press the green button in the gutter to run the script.
++if __name__ == '__main__':
++    print_hi('PyCharm')
++
++# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+Index: .idea/PythonProject_modul_2.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/PythonProject_modul_2.iml b/.idea/PythonProject_modul_2.iml
+new file mode 100644
+--- /dev/null	(date 1732131317081)
++++ b/.idea/PythonProject_modul_2.iml	(date 1732131317081)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.venv" />
++    </content>
++    <orderEntry type="jdk" jdkName="Python 3.13 (PythonProject_modul_2)" jdkType="Python SDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/profiles_settings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/profiles_settings.xml b/.idea/inspectionProfiles/profiles_settings.xml
+new file mode 100644
+--- /dev/null	(date 1732131317092)
++++ b/.idea/inspectionProfiles/profiles_settings.xml	(date 1732131317092)
+@@ -0,0 +1,6 @@
++<component name="InspectionProjectProfileManager">
++  <settings>
++    <option name="USE_PROJECT_PROFILE" value="false" />
++    <version value="1.0" />
++  </settings>
++</component>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1732131317108)
++++ b/.idea/vcs.xml	(date 1732131317108)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1732131317100)
++++ b/.idea/modules.xml	(date 1732131317100)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/PythonProject_modul_2.iml" filepath="$PROJECT_DIR$/.idea/PythonProject_modul_2.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: ../module_1_5.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../module_1_5.py b/../module_1_5.py
+new file mode 100644
+--- /dev/null	(date 1732131317125)
++++ b/../module_1_5.py	(date 1732131317125)
+@@ -0,0 +1,9 @@
++#2
++immutable_var=1,2,4,5,'H',True
++print('Immutable tuple: ', immutable_var)
++#3
++#immutable_var[0]=77 # Кортежи нельзя поменять, они неизменны,если не содержат внутри список.
++#4
++mutable_list=tuple([0,777,555],"НЕ изменить_1",456,"буква") #кортеж со [списком] в данном случае можно метять, только значения списка внутри кортежа
++mutable_list[0][1]="замена возможна"
++print("Mutable list: ", mutable_list)
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1732131317117)
++++ b/.idea/.gitignore	(date 1732131317117)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: module_2_2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/module_2_2.py b/module_2_2.py
+new file mode 100644
+--- /dev/null	(date 1732131317140)
++++ b/module_2_2.py	(date 1732131317140)
+@@ -0,0 +1,10 @@
++first=int(input("Ввведите ПЕРВОЕ целое число:  "))
++second=int(input("Ввведите ВТОРОЕ целое число: "))
++third=int(input("Ввведите ТРЕТЬЕ целое число: "))
++print("Три числа введены \n")
++if first != second != third and first !=third:
++    print('Количество целых и равных между собой чисел: ', 0)
++elif first == second and second == third and third == first:
++    print('Количество целых и равных между собой чисел: ', 3)
++elif first == second or second == third or first == third or third== first or second==first:
++    print('Количество целых и равных между собой чисел: ', 2)
+\ No newline at end of file
+Index: ../module_1_6.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../module_1_6.py b/../module_1_6.py
+new file mode 100644
+--- /dev/null	(date 1732131317133)
++++ b/../module_1_6.py	(date 1732131317133)
+@@ -0,0 +1,24 @@
++# Задание №2
++print ("-"*170)
++my_dict={str("Глаша"): int(1988),str("Роман_Валерьевич"): int(1800), str("Чук") : int(2000), str("Гек"): int(2001)} # int наверно и не нужно было так, как и так число целое, но добавил. То же и с STR.
++print(my_dict)
++print(my_dict['Роман_Валерьевич']) #выводит значения конкретного ключа
++#my_dict['Шурик'] = int(2023)
++#my_dict['Нэнси'] = int(1963)
++my_dict.update({str("Шурик"): int(2023), str("Нэнси"): int(1963)}) # добавляет ключи со значениями
++print(my_dict)
++print(my_dict.pop('Шурик')) #удаляет ключ и возвращает значение
++
++# Задание №3
++print ("-"*170)
++my_set={1,2,3,"Текст №1", True,True,'Текст №2', 1,2,3,4, "Текст №2"}
++print(set(my_set))
++print(my_set.add("дополнительный значение"), my_set.add("еще буквы"))
++print(my_set.add("дополнительный значение"), my_set.add("еще буквы"))# почему-то каждый раз вставляется в разное место
++print(set(my_set))
++
++# Тест
++#print ("-"*170)
++#my_set=input('Введи произвольные значения: ')
++#print(set(my_set))
++#print('Получено уникальных значений, шт: ', len(set(my_set)))
+\ No newline at end of file

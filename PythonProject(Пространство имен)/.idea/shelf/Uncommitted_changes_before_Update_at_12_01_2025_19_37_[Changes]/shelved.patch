@@ -1,0 +1,145 @@
+Index: ../PythonProject_test_function/.idea/PythonProject_test_function.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../PythonProject_test_function/.idea/PythonProject_test_function.iml b/../PythonProject_test_function/.idea/PythonProject_test_function.iml
+new file mode 100644
+--- /dev/null	(date 1736695934235)
++++ b/../PythonProject_test_function/.idea/PythonProject_test_function.iml	(date 1736695934235)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.venv" />
++    </content>
++    <orderEntry type="jdk" jdkName="Python 3.13 (python_project)" jdkType="Python SDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1736695720169)
++++ b/.idea/vcs.xml	(date 1736695720169)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: ../PythonProject_modul_2/.idea/PythonProject_modul_2.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../PythonProject_modul_2/.idea/PythonProject_modul_2.iml b/../PythonProject_modul_2/.idea/PythonProject_modul_2.iml
+new file mode 100644
+--- /dev/null	(date 1733811756099)
++++ b/../PythonProject_modul_2/.idea/PythonProject_modul_2.iml	(date 1733811756099)
+@@ -0,0 +1,7 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module version="4">
++  <component name="PyDocumentationSettings">
++    <option name="format" value="PLAIN" />
++    <option name="myDocStringFormat" value="Plain" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1736619380826)
++++ b/.idea/modules.xml	(date 1736619380826)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/../PythonProject_test_function/.idea/PythonProject_test_function.iml" filepath="$PROJECT_DIR$/../PythonProject_test_function/.idea/PythonProject_test_function.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: ../PythonProject_modul_4/.idea/PythonProject_modul_4.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../PythonProject_modul_4/.idea/PythonProject_modul_4.iml b/../PythonProject_modul_4/.idea/PythonProject_modul_4.iml
+new file mode 100644
+--- /dev/null	(date 1735797547258)
++++ b/../PythonProject_modul_4/.idea/PythonProject_modul_4.iml	(date 1735797547258)
+@@ -0,0 +1,10 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="PYTHON_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/.venv" />
++    </content>
++    <orderEntry type="jdk" jdkName="Python 3.13 (PythonProject_modul_4)" jdkType="Python SDK" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: ../PythonProject_test_function/ins.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../PythonProject_test_function/ins.py b/../PythonProject_test_function/ins.py
+new file mode 100644
+--- /dev/null	(date 1736699687770)
++++ b/../PythonProject_test_function/ins.py	(date 1736699687770)
+@@ -0,0 +1,16 @@
++from file_me.module_4.sortfunc import *
++print("Ввод данных через пробел: ")
++data_1=list(map(int,input().split()))
++data_2=list(map(int,input().split()))
++data_3=list(map(int,input().split()))
++# input()- всегда строка.
++# input().split() - метод с вводом с разделителем
++# map(int,input().split()) - метод map(int,..... присваивает каждому элементу списка int, но выдаст карту
++# map(int,input().split()) - метод map(int,..... присваивает каждому элементу списка int, добавляем list
++# print(f'Вывод данных:',data_1)
++bubble_sort(data_1)
++selection_sort(data_2)
++insertion_sort(data_3)
++print(f'Пузырьковая сортировка функции {bubble_sort.__name__}',data_1)
++print(f'Пузырьковая сортировка функции {selection_sort.__name__}',data_2)
++print(f'Пузырьковая сортировка функции {insertion_sort.__name__}',data_3)
+\ No newline at end of file
+diff --git a/../PythonProject_modul_4/package1/packenge2/__init__.py b/../PythonProject_modul_4/package1/packenge2/__init__.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/package1/__init__.py b/../PythonProject_modul_4/package1/__init__.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/package1/packenge2/packenge3/__init__.py b/../PythonProject_modul_4/package1/packenge2/packenge3/__init__.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/modul_4_1.py b/../PythonProject_modul_4/modul_4_1.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/modul_4.py b/../PythonProject_modul_4/modul_4.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/package1/packenge2/packenge3/module1.py b/../PythonProject_modul_4/package1/packenge2/packenge3/module1.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/Скорость письма/main_dop.py b/../PythonProject_modul_4/Скорость письма/main_dop.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/package1/main.py b/../PythonProject_modul_4/package1/main.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/package1/packenge2/packenge3/module2.py b/../PythonProject_modul_4/package1/packenge2/packenge3/module2.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/Скорость письма/__init__.py b/../PythonProject_modul_4/Скорость письма/__init__.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/Скорость письма/main.py b/../PythonProject_modul_4/Скорость письма/main.py
+new file mode 100644

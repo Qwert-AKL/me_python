@@ -1,0 +1,214 @@
+Index: ../PythonProject_modul_4/module_4_1(fake_true_math).py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import fake_math,true_math\r\nfrom fake_math import fake_divide\r\nfrom true_math import true_divide\r\nprint(f'Ответ {fake_math.fake_divide.__name__ }')\r\nresult1 = fake_divide(69, 3)\r\nresult2 = fake_divide(3, 0)\r\nprint('')\r\nprint(f'Ответ {true_math.true_divide.__name__ }')\r\nresult3 = true_divide(49, 7)\r\nresult4 = true_divide(15, 0)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../PythonProject_modul_4/module_4_1(fake_true_math).py b/../PythonProject_modul_4/module_4_1(fake_true_math).py
+--- a/../PythonProject_modul_4/module_4_1(fake_true_math).py	(revision 109730289cb691429d3a15c107bf098a18410e69)
++++ b/../PythonProject_modul_4/module_4_1(fake_true_math).py	(date 1736189548398)
+@@ -1,4 +1,4 @@
+-import fake_math,true_math
++import fake_math, true_math
+ from fake_math import fake_divide
+ from true_math import true_divide
+ print(f'Ответ {fake_math.fake_divide.__name__ }')
+Index: ../PythonProject_modul_4/modul_4.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../PythonProject_modul_4/modul_4.py b/../PythonProject_modul_4/modul_4.py
+new file mode 100644
+--- /dev/null	(date 1736188635752)
++++ b/../PythonProject_modul_4/modul_4.py	(date 1736188635752)
+@@ -0,0 +1,12 @@
++import modul_4_1 as m4_1
++from modul_4_1 import *
++# import modul_4_1 as mo_4_1
++# from modul_4_1 import a,b,say_hi
++
++# print(dir(m4_1))
++# print('Привет я из модуля 4')
++# # print(m4_1.a)
++# # m4_1.say_hi()
++# # print(a)
++# print(m4_1.__name__)
++b=10
+\ No newline at end of file
+Index: ../PythonProject_modul_4/modul_4_1.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../PythonProject_modul_4/modul_4_1.py b/../PythonProject_modul_4/modul_4_1.py
+new file mode 100644
+--- /dev/null	(date 1736188692416)
++++ b/../PythonProject_modul_4/modul_4_1.py	(date 1736188692416)
+@@ -0,0 +1,25 @@
++from dis import dis
++
++
++# def say_hi():
++#     print('Привет я из функции 4.1')
++#
++#
++#
++# def main():
++#     a=5
++#     b=10
++#     print('приффет')
++#
++#
++#
++#
++# if  __name__ == '__main__':
++#     main()
++
++def some_func():
++    a= "я из второго модуля"
++    print("Я из второго модуля")
++    return a
++
++dis(some_func)
+\ No newline at end of file
+Index: ../PythonProject_modul_4/Скорость письма/main_dop.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../PythonProject_modul_4/Скорость письма/main_dop.py b/../PythonProject_modul_4/Скорость письма/main_dop.py
+new file mode 100644
+--- /dev/null	(date 1736439125984)
++++ b/../PythonProject_modul_4/Скорость письма/main_dop.py	(date 1736439125984)
+@@ -0,0 +1,5 @@
++import pandas as pd # pip install pandas
++d={"кто":[], "когда":[], "за_сколько":[], "наскололько_хорошо":[]}
++df=pd.DataFrame(d)  #метод создания в падасе таблички
++df.to_csv("Scores_table.csv", index=False)  # сохранения данных. csv расшифровка comma separated values (данные разделённые запятыми)
++print(df)
+Index: ../PythonProject_modul_4/package1/packenge2/packenge3/module1.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../PythonProject_modul_4/package1/packenge2/packenge3/module1.py b/../PythonProject_modul_4/package1/packenge2/packenge3/module1.py
+new file mode 100644
+--- /dev/null	(date 1736190046242)
++++ b/../PythonProject_modul_4/package1/packenge2/packenge3/module1.py	(date 1736190046242)
+@@ -0,0 +1,3 @@
++def hello(name):
++    print('Привет',name)
++
+Index: ../PythonProject_modul_4/package1/packenge2/packenge3/module2.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../PythonProject_modul_4/package1/packenge2/packenge3/module2.py b/../PythonProject_modul_4/package1/packenge2/packenge3/module2.py
+new file mode 100644
+--- /dev/null	(date 1736190971412)
++++ b/../PythonProject_modul_4/package1/packenge2/packenge3/module2.py	(date 1736190971412)
+@@ -0,0 +1,8 @@
++from .module1 import hello
++def good_word(name):
++    hello(name)
++    print('Ты лучший', name)
++
++
++if __name__ == '__main__':
++    good_word('Урбан')
+Index: ../PythonProject_modul_4/package1/main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../PythonProject_modul_4/package1/main.py b/../PythonProject_modul_4/package1/main.py
+new file mode 100644
+--- /dev/null	(date 1736191223568)
++++ b/../PythonProject_modul_4/package1/main.py	(date 1736191223568)
+@@ -0,0 +1,3 @@
++from package1.packenge2.packenge3.module2 import good_word
++if __name__ == "__main__":
++    good_word("Урбан")
+\ No newline at end of file
+Index: ../PythonProject_modul_4/Скорость письма/main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/../PythonProject_modul_4/Скорость письма/main.py b/../PythonProject_modul_4/Скорость письма/main.py
+new file mode 100644
+--- /dev/null	(date 1736439426703)
++++ b/../PythonProject_modul_4/Скорость письма/main.py	(date 1736439426703)
+@@ -0,0 +1,55 @@
++# План по скрипту для скорости письма
++'''
++- генерация текста
++- работа с пользователем
++- обработка данных
++- выдача результата
++-* сохранение результата
++'''
++
++
++# / генерация текста
++
++def gen_text():
++    import names  # (pip install names в терминале)
++    from names import get_full_name
++    return ''.join([get_full_name() for i in range(5)])  # передача списку с генерированных имён
++
++
++def output(sim, time):
++    import pandas as pd
++    import datetime
++    print(f'Ваше время письма: {round(time,2)}секунд')   #округление времени
++    print(f'Ваша точность письма: {sim}%')
++
++    # Табличка кто когда за_сколько наскололько _хорошо
++    df=pd.read_csv('Scores_table.csv') #
++    df.loc[len(df)] = [input('Введите Ваше имя'),datetime.datetime.today(),time,sim]
++    print(df)
++    df.to_csv("Scores_table.csv", index=False)
++
++
++
++# - работа с пользователем
++def user_input(text):
++    import time
++    from time import time  # импорт метода из библиотеки засечения времени.
++    start = time()
++    user_text = input(f'Напишите следующий текст: \n{text}\n->>')
++    stop = time()
++    user_time = stop - start
++    return user_time, user_text
++
++
++def simmilarity(text, user_text):  # проверка схожести текста в %
++    import difflib
++    matcher = difflib.SequenceMatcher(None, text, user_text)
++    return int(round(matcher.ratio() * 100, 0))  # Возврат  и округление точности
++
++
++text = gen_text()
++text = 'Черногория'  #
++user_time, user_text = user_input(text)  #
++sim = simmilarity(text, user_text)
++output(sim, user_time)
++print()
+diff --git a/../PythonProject_modul_4/Скорость письма/__init__.py b/../PythonProject_modul_4/Скорость письма/__init__.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/package1/__init__.py b/../PythonProject_modul_4/package1/__init__.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/package1/packenge2/__init__.py b/../PythonProject_modul_4/package1/packenge2/__init__.py
+new file mode 100644
+diff --git a/../PythonProject_modul_4/package1/packenge2/packenge3/__init__.py b/../PythonProject_modul_4/package1/packenge2/packenge3/__init__.py
+new file mode 100644
+diff --git a/module4_2.py b/../PythonProject_modul_4/module4_2.py
+rename from module4_2.py
+rename to ../PythonProject_modul_4/module4_2.py
+diff --git a/../PythonProject_modul_2/Рекурсивное умножение цифр.py b/../PythonProject_modul_2/module_3_5 (Рекурсивное умножение цифр).py
+rename from ../PythonProject_modul_2/Рекурсивное умножение цифр.py
+rename to ../PythonProject_modul_2/module_3_5 (Рекурсивное умножение цифр).py

@@ -38,7 +38,7 @@
 # for i in dict_:
 #     print(i, dict_[i])
 
-    # Второй вариант через метод
-dict_ = {'a': 1, 'b': 2, 'c': 3}
+# Второй вариант через метод
+dict_ = {"a": 1, "b": 2, "c": 3}
 for i, k in dict_.items():
     print(i, k)
